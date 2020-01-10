@@ -1,75 +1,74 @@
-# NAME : INSTAGRAM
+# Instagram application
 
-## DESCRIPTION 
-.Instragram is an application that enables users to post their post and can be followed by other users.Their post can be shared ,commented and liked others.
+A personal blogging website where you can create and share your opinions and other users can read and comment on them.
 
+## Built By [DOMINIC RUTTO](https://github.com/Leina33/)
 
-## AUTHOR
-Domic Rutto
+Instagram application where you can create and share your images and other users can views and on them. You can view the site at: 
 
-## CLONE
-Fork this repository or clone it to your local machine on ubuntu use the following commands
+## Description
 
-git clone this repo https://github.com/owinolawrence/instagram.git
+## User Stories
 
-## USER STORY
-As a user of the application you will be able to:
+These are the behaviours/features that the application implements for use by a user.
+As a user I would like to:
 
-1 View different posts from accounts followed
-2 Click on a single photo to expand it and also view the details of the photo.
-3 Search for user profiles
-comment on photos
-4 Like posts
-5 Upload Posts with caption
-6 Follow other users
+- See the pictures i posted
+- save them
+- like the picture
+- comment the posted picture
+## Specifications
 
+| Behaviour                            |            Input             |                                                               Output |
+| :----------------------------------- | :--------------------------: | -------------------------------------------------------------------: |
+| Display pictured                     |       **On page load**       |             List of various images sources is displayed per category |
+| user  like the post                  |      **Click on image**      |           Redirected to a page with a list of images from the source |
+| Read an entire desc                  | **check category sub-title** | Redirected to the picked category source's site to read entire pitch |
+| Go back to website category you need |        **Click Home**        |                                  Redirected to the post a pitch area |
 
-## INSTALLATION
-1.set up a virtual environment using the following command.
+## SetUp / Installation Requirements
 
-python3 -m venv  virtual
-And activate virtual
+### Prerequisites
 
-source virtual/bin/activate
+- python3.6
+- pip
+- virtualenv
+- psql database
 
-2.Install the requirements use the command.
-pip install -r requirements.txt
+### Cloning
 
-3.create a .env file and add
+- In your terminal:
+  \$ git clone https://github.com/Leina33/insta.git
 
-SECRET_KEY='<random-string>'
-DEBUG=True
-ALLOWED_HOSTS='*'
-DATABASE_URL='postgres://databaseowner:password@localhost/databasename'
+## Running the Application
 
-4.create a database using postgres
+- Creating the virtual environment
+  $ python3.6 -m venv --without-pip virtual
+        $ source virtual/bin/env
+- Installing Django and other Modules
+  $ python3.6 -m pip install djang0==1.11
+        $ python3.6 -m pip install Flask-Bootstrap4
+  $ python makemigration photos
+        $ python manage.py migrate
+  $ pip install psycopg2
+        $ pip install pyuploadcare
+  #check on requirements.txt file
+- To run the application, in your terminal:
+  \$ python3.6 manage.py runserver
 
-CREATE DATABASE <your-database-name>
+## Testing the Application
 
-5.create a migration using the following command
-python3 manage.py makemigrations
+- To run the tests for the class files:
+  $ cd app
+        $ python3.6 test.py
 
-migrate
+## Technologies Used
 
-python3.6 manage.py migrate
+- Python3.6
+- Django
+- Html
+- Bootstrap4
 
-6.create a super user for admin account
-python 3.6 manage.py createsuperuser
-add your password and username , email is not a must.
+## License
 
-7.To run user :
-python3 manage.py runserver
-
-navigate to admin by adding /admin to your local host url like so :
-
-127.0.0.1:8000/admin
-
-## TECHNOLOGIES USED
-1:Html5 and Css3
-2:Python
-3:Bootstrap 3
-4:Django
-5:Jquery
-
-## LICENSE
-This project is licensed under the [MIT] license
+MIT &copy;2019 [DOminic Rutto](https://github.com/Leina33)
