@@ -1,6 +1,6 @@
 
   h1{
-    color:blueviolet;
+    color:#405DE6;
     text-align: center;
     font-family: 'Cookie', cursive;
   }
@@ -10,13 +10,7 @@
     background-repeat: no-repeat;
     background-size: cover;
   } 
-  .card {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    padding: 16px;
-    text-align: center;
-    background-color: #f1f1f1;
-    padding-top: 30px;
-  }
+
   img {
     border-radius: 50%;
   }

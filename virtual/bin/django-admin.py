@@ -1,4 +1,4 @@
-#!/home/moringa/Documents/instagram/virtual/bin/python3.6
+#!/home/moringa/Desktop/instagram/virtual/bin/python3.6
 from django.core import management
 
 if __name__ == "__main__":

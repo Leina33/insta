@@ -8,9 +8,9 @@ from django.contrib.auth import views as auth_views
 urlpatterns=[
     
     
-    url('', views.signup, name='signup'),
+    url('signup/', views.signup, name='signup'),
     url(r'^home/', views.home, name = 'home'),
-    url(r'^login/', auth_views.LoginView.as_view(template_name = 'auth/login.html'), name = 'login'),
+    url('', auth_views.LoginView.as_view(template_name = 'auth/login.html'), name = 'login'),
     url(r'^logout/', auth_views.LogoutView.as_view(template_name='auth/logout.html'), name = 'logout'),
     url(r'^profile/', views.profile , name = 'my_profile'),
     url(r'^image/new', views.createimage.as_view(), name = 'post'),

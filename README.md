@@ -5,7 +5,7 @@
 
 
 ## AUTHOR
-.OWINO LAWRENCE ODHIAMBO
+Domic Rutto
 
 ## CLONE
 Fork this repository or clone it to your local machine on ubuntu use the following commands

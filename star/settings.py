@@ -56,34 +56,40 @@ MIDDLEWARE = [
 ROOT_URLCONF = 'star.urls'
 
 TEMPLATES = [
-    {
-        'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
-        'APP_DIRS': True,
-        'OPTIONS': {
-            'context_processors': [
-                'django.template.context_processors.debug',
-                'django.template.context_processors.request',
-                'django.contrib.auth.context_processors.auth',
-                'django.contrib.messages.context_processors.messages',
-                'django.template.context_processors.media',
-            ],
-        },
+{
+    'BACKEND': 'django.template.backends.django.DjangoTemplates',
+    'DIRS': [],
+    'APP_DIRS': True,
+    'OPTIONS': {
+        'context_processors': [
+            'django.template.context_processors.debug',
+            'django.template.context_processors.request',
+            'django.contrib.auth.context_processors.auth',
+            'django.contrib.messages.context_processors.messages',
+            # 'app.apptemplates.load_setting',
+
+        ],
+
+        # 'libraries':{
+        #     'my_templatetag': 'app.templatetags.my_templatetag',
+
+        #     }
     },
+},
 ]
 
 WSGI_APPLICATION = 'star.wsgi.application'
 
 
 # Database
-# https://docs.djangoproject.com/en/1.11/ref/settings/#databases
+# https://docs.djangoproject.com/en/1.11/ref/settings/#databasespy
 
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'social',
+        'NAME': 'gram',
         'USER':'moringa',
-        'PASSWORD':'72330000',
+        'PASSWORD':'dominic',
     }
 }
 
@@ -132,4 +138,4 @@ STATICFILES_DIRS = [
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-django_heroku.settings(locals())
+# django_heroku.settings(locals())
